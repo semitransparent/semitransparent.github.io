@@ -1,4 +1,4 @@
 github:
 
-	ghp-import -n $(OUTPUTDIR)
+	python "$(command -v ghp-import)" output
 	@git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git gh-pages > /dev/null
