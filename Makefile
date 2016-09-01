@@ -1,4 +1,10 @@
+BASEDIR=$(TRAVIS_BUILD_DIR)
+INPUTDIR=$(BASEDIR)/content
+OUTPUTDIR=$(BASEDIR)/output
+
+publish:
+	pelican -D $(INPUTDIR)
+
 github:
-	pelican ./content
-	ghp-import -b gh-pages -n output
+	ghp-import -b gh-pages -n content
 	git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git gh-pages

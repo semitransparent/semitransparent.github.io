@@ -9,6 +9,7 @@ before_script:
 - pelican-themes -i ./theme/eevee
 
 script:
+- make publish
 - make github
 env:
   global:
