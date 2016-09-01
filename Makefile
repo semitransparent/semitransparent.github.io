@@ -4,7 +4,6 @@ OUTPUTDIR=$(BASEDIR)/output
 
 publish:
 	ls $(INPUTDIR)
-	pwd
 	pelican -D $(INPUTDIR)
 
 github:
