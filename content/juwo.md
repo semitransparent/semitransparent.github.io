@@ -1,5 +1,5 @@
 Title: Manipulating 'Langenscheid Jugendwort des Jahres'
-Date: 2016-09-30 23:50
+Date: 2016-09-02 23:50
 Category: API
 
 _Manipulating the election of the German youth word of the year_
