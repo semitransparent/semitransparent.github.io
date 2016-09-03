@@ -3,7 +3,7 @@ branches:
   only:
   - content
 install:
-- pip install pelican ghp-import
+- pip install pelican ghp-import markdown
 
 before_script:
 - pelican-themes -i ./themes/eevee
