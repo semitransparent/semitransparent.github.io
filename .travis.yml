@@ -1,7 +1,7 @@
 language: python
 branches:
   only:
-  - master
+  - content
 install:
 - pip install pelican ghp-import
 
