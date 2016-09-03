@@ -7,5 +7,5 @@ publish:
 	pelican $(INPUTDIR)
 
 github:
-	ghp-import -b gh-pages -n $(OUTPUTDIR)
-	git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git gh-pages
+	ghp-import -b master -n $(OUTPUTDIR)
+	git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git master
