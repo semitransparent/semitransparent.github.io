@@ -24,6 +24,4 @@ And here is one after:
 
 <img src="{filename}/images/juwo3.png" alt="Screenshot" style="width: 80%;"/>
 
-We were able to increase the position by 0.1% using 2000 requests. A lot of these requests returned "0" instead of "1" so they probably did not count. Also a few of the requests did return HTTP 500 answers. But still: Langenscheid ain't the best when it comes to secure their poll.
-
-Using more threads the website got even slower than it already was, so we refrained from that. Also the results page did not load anymore. We did not want to DDOS anything but just show how easy the manipulation is. 
+We were able to increase the position by 0.1% using 2000 requests. A lot of these requests returned "0" instead of "1" so they probably did not count. Also a few of the requests did return HTTP 500 answers. But still: Langenscheid ain't the best when it comes to securing their poll. Using more threads the website got even slower than it already was, so we refrained from that. Also the results page did not load anymore. We did not want to DDOS anything but just show how easy the manipulation is. 
