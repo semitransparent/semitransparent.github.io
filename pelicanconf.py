@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'by semi_transparent'
 SITENAME = 'semi_transparent'
-SITEURL = ""#'semitransparent.github.io'
+SITEURL = "" #'semitransparent.github.io'
 
 PATH = 'content'
 
@@ -25,11 +25,17 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+TWITTER_USERNAME = 'semitransp'
 
 #Header config
-MENUITEMS = [("<i class='fa fa-twitter fa-2x'></i>", "https://twitter.com/semi_transparent")]
+MENUITEMS = [("<i class='fa fa-twitter fa-2x'></i>", "https://twitter.com/semitransp")]
 
 DEFAULT_PAGINATION = False
+
+STATIC_PATHS = ['images', 'images/favicon.ico']
+EXTRA_PATH_METADATA = {
+    'images/favicon.ico': {'path': 'favicon.ico'}
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
