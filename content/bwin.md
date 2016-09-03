@@ -10,9 +10,7 @@ A little disappointed I picked bwin.com (because they offer a hell of a lot of b
 #Setting up the capture environment
 First odd thing I noticed is that the official bwin app is not in Playstore but needs to be downloaded from their site. This leads to a pretty hilarious website and makes bwin assure you about 5 times this app really is legit and you should absolutely install it despite all warnings.
 
-<img src="{filename}/images/bwin0.png" alt="Screenshot" style="width: 32%;"/>
-<img src="{filename}/images/bwin2.jpg" alt="Meme" style="width: 32%;"/>
-<img src="{filename}/images/bwin3.jpg" alt="Legit" style="width: 32%;"/>
+<img src="{filename}/images/bwin4.jpg" alt="Screenshot" style="width: 95%;"/>
 
 So I downloaded the app and set up the capture.  
 

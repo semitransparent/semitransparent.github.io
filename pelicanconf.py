@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'semitransparent'
-SITENAME = 'semitransparent'
-SITEURL = 'semitransparent.github.io'
+AUTHOR = 'by semi_transparent'
+SITENAME = 'semi_transparent'
+SITEURL = ""#'semitransparent.github.io'
 
 PATH = 'content'
 
 THEME = 'eevee'
-THEME_PRIMARY = 'indigo'
-THEME_ACCENT = 'deep_orange'
+THEME_PRIMARY = 'amber'
+THEME_ACCENT = 'red'
 MEGA_FOOTER = False
 DISCLAIMER = False
 SUMMARY_MAX_LENGTH = 150
@@ -26,15 +26,8 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+#Header config
+MENUITEMS = [("<i class='fa fa-twitter fa-2x'></i>", "https://twitter.com/semi_transparent")]
 
 DEFAULT_PAGINATION = False
 

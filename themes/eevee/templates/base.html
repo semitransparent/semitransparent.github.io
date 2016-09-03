@@ -84,7 +84,7 @@
                 </nav>
             </div>
         </div>
-        <div class="eevee-ribbon mdl-color--primary-dark" role="presentation">
+        <div id="eevee-ribbon-particle" class="eevee-ribbon mdl-color--primary-dark" role="presentation">
         </div>
         <main class="eevee-main mdl-layout__content">
             <div class="eevee-container mdl-grid">
@@ -160,8 +160,12 @@
               href="{{ SITEURL }}/theme/css/eevee.css">
         <link rel="stylesheet" type="text/css"
               href="{{ SITEURL }}/theme/css/custom.css">
-        <script async src="{{ SITEURL }}/theme/js/material.js">
+        <script async src="{{ SITEURL }}/theme/js/material.js"></script>
+        <script src="{{ SITEURL }}/theme/js/jquery.particleground.js"></script>
+        <script>
+        	particleground(document.getElementById("eevee-ribbon-particle"));
         </script>
+        
     {% endif %}
     {% include 'partials/analytics.html' %}
 </body>
