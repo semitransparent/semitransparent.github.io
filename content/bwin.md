@@ -7,14 +7,12 @@ _Searching for and finding an API to poll betting odds from bwin.com by a man-in
 I was searching for interesting statistical data the other day and stumbled across online betting. I never really got into gambling at all and was surprised how popular it is. The market is littered with more or less shady offers. Anyhow none of these seems to be pretty chatty about their data or even has an official API. Therefore I tried to analyze several websites just to find most of those betting providers try to obfuscate their backends API calls as good as they can.
 A little disappointed I picked bwin.com (because they offer a hell of a lot of betting data) and started to analyze their mobile application for more insights in how their API works. Using [mitmproxy](https://mitmproxy.org/) I was able to man-in-the-middle the calls to the backend API. There is a good tutorial on how to intercept phone connection with mitmproxy [here](http://www.digitalinternals.com/mobile/android-sniff-http-https-traffic-without-root/490/). It turns out this API is much better to use than the one used by the website.
 
-#Setting up the capture environment
 First odd thing I noticed is that the official bwin app is not in Playstore but needs to be downloaded from their site. This leads to a pretty hilarious website and makes bwin assure you about 5 times this app really is legit and you should absolutely install it despite all warnings.
 
 <img src="{filename}/images/bwin4.jpg" alt="Screenshot" style="width: 95%;"/>
 
 So I downloaded the app and set up the capture.  
 
-#First contact
 Starting the app caused lot of pollution in mimproxy. From a fresh start I counted 19 connections made to different endpoints. No less than 4 analytics networks are queried by the bwin app: appsflyer.com, eumcollector, mixpanel and google-analytics. Even before I had any interaction with the app my carrier name, device, network type and other things were transferred to third party servers.
 
 Another call caught my attention.
@@ -35,8 +33,7 @@ GET https://api.bwin.com/V3/GeoLocation.svc/IP/
 ```
 Bwin seems to run their own geolocation API. Because its IP based accuracy is just on a city level in my case. All api.bwin.com calls look very generic and might very well be shared between the website and the mobile app. There is another call to get the current server time and one that contains localized tutorials and names for a lot of sports clubs and countries around the world.
 
-#The actual API
-So I had one promising domain left: mobileapi.bwinlabs.com.
+I had one promising domain left: mobileapi.bwinlabs.com.
 ```
 GET https://en.mobileapi.bwinlabs.com/api/android/v2/events/ms2common?leagueid=43&regionid=17&overview_or_events_switch=...
 	← 200 application/json 18.13kB 247ms
@@ -54,7 +51,6 @@ These three parameters can easily be obtained from [bwin lite](https://lite.bwin
 The other parameters control how many and what information are packed into the JSON. So I started stripping the request. `markettemplateid=17` seems to control if only popular offers should be shown or all of them. Removing lead to a 7MB JSON file containing a pretty good list of games and betting odds. With the 'page_size' attribute this huge JSON can be shrinked by only showing the latest n offerings. 
 All other request parameters except the `events` keyword can be removed. The original request headers are not needed as well.
 
-#Example
 Using that knowledge coding a Python wrapper for basic odd requests is very simple.
 ```
 import requests

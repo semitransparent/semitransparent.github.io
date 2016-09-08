@@ -4,7 +4,6 @@ Category: Polls
 
 _Manipulating the election of the German youth word of the year_
 
-#Setup
 The German Publisher Langenscheid once a year holds a poll for the 'youth word of the year'. Like every time this year 30 more or less hilarious words can be voted for by the beloved social media community. Most of them are totally unknown to me. But I like one word to win: 'Tintling'.
 
 So a friend and me backtracked the voting request.
@@ -15,7 +14,6 @@ It was not even HTTPS. The only protection we found against flooding was the sup
 
 #Execution
 So we wrote a script that shuffels the Cookie parameters a bit and changed the User-Agent to a good looking Windows NT one. Because the server is so slow multiple requests are send in parallel to make the voting a bit faster. We will publish the code as soon as this is fixed by Langenscheidt.
-
 To proove our script works we took another entry which was not already #1 and started the voting. Here is a screenshot of "Googleschreiber" before we started.
 
 <img src="{filename}/images/juwo2.png" alt="Poll before" style="width: 80%;"/>

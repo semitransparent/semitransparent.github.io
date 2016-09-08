@@ -4,7 +4,7 @@ OUTPUTDIR=$(BASEDIR)/output
 
 publish:
 	ls $(INPUTDIR)
-	pelican $(INPUTDIR)
+	pelican $(INPUTDIR) -s $(BASEDIR)/publishconf.py
 
 github:
 	ghp-import -b master -n $(OUTPUTDIR)
