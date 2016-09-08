@@ -15,7 +15,7 @@ MEGA_FOOTER = False
 DISCLAIMER = False
 SUMMARY_MAX_LENGTH = 150
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = 'en'
 
