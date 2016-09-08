@@ -16,7 +16,7 @@ It was not even HTTPS. The only protection we found against flooding was the sup
 #Execution
 So we wrote a script that shuffels the Cookie parameters a bit and changed the User-Agent to a good looking Windows NT one. Because the server was so slow 20 requests are send in parallel to make the voting a bit faster. We will publish the code as soon as this is fixed by Langenscheidt.
 
-To proove our script works we took another entry which was not already #1 and started the voting. Here is a screenshot of 'Googleschreiber' before we started.
+To proove our script works we took another entry which was not already #1 and started the voting. Here is a screenshot of "Googleschreiber" before we started.
 
 <img src="{filename}/images/juwo2.png" alt="Screenshot" style="width: 80%;"/>
 
@@ -24,4 +24,7 @@ And here is one after:
 
 <img src="{filename}/images/juwo3.png" alt="Screenshot" style="width: 80%;"/>
 
-We were able to increase the position by 0.1% using 2000 requests. A lot of these requests returned "0" instead of "1" so they probably did not count. Also a few of the requests did return HTTP 500 answers. But still: Langenscheid ain't the best when it comes to securing their poll. Using more threads the website got even slower than it already was, so we refrained from that. Also the results page did not load anymore. We did not want to DDOS anything but just show how easy the manipulation is. 
+We were able to increase the position by 0.1% using 2000 requests. A lot of these requests returned "0" instead of "1" so they probably did not count. Also a few of the requests did return HTTP 500 answers. In total about 100 requests were delivered to the server and returned "1". Therefore Langescheidt seems to have about 100.000 votes collected already. 
+Now we were eager to boost "Googleschreiber's" counter a bit. But using more threads the website got even slower than it already was, so we refrained from that. Also the results page did not load anymore as soon as one of us used more than than one or two requests per second. Because we did not want to DDOS anything but just show how easy the manipulation is "Googleschreiber" is still on a miserable position.
+
+Using Twitter we tried to get in touch with Langescheidt but they did not react in any way.
