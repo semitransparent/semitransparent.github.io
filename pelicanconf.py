@@ -28,7 +28,7 @@ AUTHOR_FEED_RSS = None
 TWITTER_USERNAME = 'semitransp'
 
 #Header config
-MENUITEMS = [("<i class='fa fa-twitter fa-2x'></i>", "https://twitter.com/semitransp")]
+MENUITEMS = [("<i class='fa fa-twitter fa-2x'></i>", "https://twitter.com/semitransp"), ("<i class='fa fa-mail fa-2x'></i>", "mailto:semitransp@gmail.com")]
 
 DEFAULT_PAGINATION = False
 
