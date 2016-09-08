@@ -1,6 +1,6 @@
 Title: Manipulate Opinary polls
 Date: 2016-09-02 17:33
-Category: API
+Category: Polls
 
 _Manipulating the results of a popular poll service_
 
