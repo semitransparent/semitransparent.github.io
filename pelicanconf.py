@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = "by semi_transparent. Hosted with <i class='fa fa-heart'> by github"
+AUTHOR = "by semi_transparent. Hosted by github"
 SITENAME = "semi_transparent"
 SITEURL = "" #'semitransparent.github.io'
 
