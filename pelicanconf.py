@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'by semi_transparent. Hosted with <i class='fa fa-heart'> by github'
-SITENAME = 'semi_transparent'
+AUTHOR = "by semi_transparent. Hosted with <i class='fa fa-heart'> by github"
+SITENAME = "semi_transparent"
 SITEURL = "" #'semitransparent.github.io'
 
 PATH = 'content'
@@ -28,7 +28,7 @@ AUTHOR_FEED_RSS = None
 TWITTER_USERNAME = 'semitransp'
 
 #Header config
-MENUITEMS = [("<i class='fa fa-twitter fa-2x'></i>", "https://twitter.com/semitransp"), ("<i class='fa fa-mail fa-2x'></i>", "mailto:semitransp@gmail.com")]
+MENUITEMS = [("<i class='fa fa-twitter fa-2x'></i>", "https://twitter.com/semitransp"), ("<i class='fa fa-envelope fa-2x'></i>", "mailto:semitransp@gmail.com")]
 
 DEFAULT_PAGINATION = False
 
