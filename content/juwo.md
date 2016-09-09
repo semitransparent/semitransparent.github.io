@@ -26,3 +26,9 @@ We were able to increase the position by 0.1% using 2000 requests. A lot of thes
 Now we were eager to boost "Googleschreiber's" counter a bit more. But using more threads the website got even slower than it already was, so we refrained from that. Also the results page did not load anymore as soon as one of us used more than than one or two requests per second. Because we did not want to DDOS anything but just show how easy the manipulation is "Googleschreiber" is still on a miserable position.
 
 Using Twitter we tried to get in touch with Langescheidt but they did not react in any way.
+
+*Update 09/09/2016*
+The result page is now completely broken, all percentages went mad.
+<img src="{filename}/images/juwo4.png" alt="Poll after" style="width: 70%;"/>
+
+
