@@ -27,8 +27,8 @@ Now we were eager to boost "Googleschreiber's" counter a bit more. But using mor
 
 Using Twitter we tried to get in touch with Langescheidt but they did not react in any way.
 
-**Update 09/09/2016**
+**Update 09/09/2016**  
 The result page is now completely broken, all percentages went mad.
-<img src="{filename}/images/juwo4.png" alt="Poll after" style="width: 70%;"/>
+<img src="{filename}/images/juwo4.png" alt="Poll after" style="width: 80%;"/>
 
 
