@@ -31,6 +31,6 @@ Props for naming the stackoverflow thread the code orginates from, but its just 
 To find that out I wrote a small script that constructs a vote request every second. Then I measured how many votes are created by real users during a 8 minute timeframe. After that I fired up my script and measured for 8 more minutes. The results met my expectations. I was able to take control of the needle and vote 8x more than all other voters in that timeframe combined.
 <img src="{filename}/images/opinary5.png" alt="graph of vote results" style="width: 80%;"/>
 
-Using this glitch opinary polls can easily be manipulated to show the desired result. Opinary is used by several German news sites like Spiegel Online, welt.de and the Huffington Post. I tried to get in touch with Opinary but there has not been any reaction yet.
+Using this glitch opinary polls can easily be manipulated to show the desired result. Opinary is used by several German news sites like Spiegel Online, welt.de and the Huffington Post. I tried to get in touch with Opinary but there has not been any reaction to my mails.
 <img src="{filename}/images/opinary4.png" alt="manipulated result" style="width: 40%;"/>
 
