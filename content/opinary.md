@@ -32,5 +32,10 @@ To find that out I wrote a small script that constructs a vote request every sec
 <img src="{filename}/images/opinary5.png" alt="graph of vote results" style="width: 80%;"/>
 
 Using this glitch opinary polls can easily be manipulated to show the desired result. Opinary is used by several German news sites like Spiegel Online, welt.de and the Huffington Post. I tried to get in touch with Opinary but there has not been any reaction to my mails.
-<img src="{filename}/images/opinary4.png" alt="manipulated result" style="width: 40%;"/>
 
+**Update 10/09/2016**
+Because there was no reaction from Opinary at all I went to write to the Newspapers that use their service. For demonstration purpose I needed some undeniable data. Did you know Donald Trump rapidly gained trust among Focus Online readers today? Also the new iPhone sucks massively.
+<img src="{filename}/images/opinary7.png" alt="graph of vote results" style="width: 80%;"/>
+<img src="{filename}/images/opinary8.png" alt="graph of vote results" style="width: 80%;"/>
+
+Using this images I mailed the newspapers that use Opinary and wait for an answer now.
