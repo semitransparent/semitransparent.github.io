@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>semi_transparent</title><link href="https://semitransparent.github.io/" rel="alternate"></link><link href="https://semitransparent.github.io/feeds/polls.atom.xml" rel="self"></link><id>https://semitransparent.github.io/</id><updated>2016-09-02T23:50:00+02:00</updated><entry><title>Manipulating 'Langenscheid Jugendwort des Jahres'</title><link href="https://semitransparent.github.io/manipulating-langenscheid-jugendwort-des-jahres.html" rel="alternate"></link><published>2016-09-02T23:50:00+02:00</published><author><name>by semi_transparent. Hosted by github</name></author><id>tag:semitransparent.github.io,2016-09-02:manipulating-langenscheid-jugendwort-des-jahres.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Manipulating the election of the German youth word of the year&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The German Publisher Langenscheid once a year holds a poll for the 'youth word of the year'. Like every time this year 30 more or less hilarious words can be voted for by the beloved social media community. Most of them are totally unknown to me. But I like one word to win: 'Tintling'.&lt;/p&gt;
+&lt;p&gt;So a friend and me backtracked the voting request.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://semitransparent.github.io/images/juwo1.png" alt="mitmproxy voting request" style="width: 95%;"/&gt;&lt;/p&gt;
+&lt;p&gt;It was not even HTTPS. The only protection we found against flooding was the super slow server. Just resending the request gave a nice and clean HTTP 200 response. But could this have been all? Maybe there was some more sophisticated protection in the background?&lt;/p&gt;
+&lt;h1&gt;Execution&lt;/h1&gt;
+&lt;p&gt;So we wrote a script that shuffels the Cookie parameters a bit and changed the User-Agent to a good looking Windows NT one. Because the server is so slow multiple requests are send in parallel to make the voting a bit faster. We will publish the code as soon as this is fixed by Langenscheidt.
+To prove our script works we took another entry which was not already #1 and started the voting. Here is a screenshot of "Googleschreiber" before we started.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://semitransparent.github.io/images/juwo2.png" alt="Poll before" style="width: 80%;"/&gt;&lt;/p&gt;
+&lt;p&gt;And here is one after a few minutes.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://semitransparent.github.io/images/juwo3.png" alt="Poll after" style="width: 80%;"/&gt;&lt;/p&gt;
+&lt;p&gt;We were able to increase the position by 0.1% using 2000 requests. A lot of these requests returned "0" instead of "1" so they probably did not count. Also a few of the requests did return HTTP 500 answers. In total about 100 requests were delivered to the server and returned "1". Therefore Langescheidt seems to have about 100.000 votes collected already. 
+Now we were eager to boost "Googleschreiber's" counter a bit more. But using more threads the website got even slower than it already was, so we refrained from that. Also the results page did not load anymore as soon as one of us used more than than one or two requests per second. Because we did not want to DDOS anything but just show how easy the manipulation is "Googleschreiber" is still on a miserable position.&lt;/p&gt;
+&lt;p&gt;Using Twitter we tried to get in touch with Langescheidt but they did not react in any way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 09/09/2016&lt;/strong&gt;&lt;br /&gt;
+The result page is now completely broken, all percentages went mad.
+&lt;img src="https://semitransparent.github.io/images/juwo4.png" alt="Poll after" style="width: 80%;"/&gt;&lt;/p&gt;</summary></entry><entry><title>Manipulate Opinary polls</title><link href="https://semitransparent.github.io/manipulate-opinary-polls.html" rel="alternate"></link><published>2016-09-02T17:33:00+02:00</published><author><name>by semi_transparent. Hosted by github</name></author><id>tag:semitransparent.github.io,2016-09-02:manipulate-opinary-polls.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Manipulating the results of a popular poll service&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Reading some &lt;a href="http://www.welt.de/politik/deutschland/article157917484/Warum-Fluechtlinge-Mecklenburg-Vorpommern-lieben.html"&gt;news pages&lt;/a&gt; I came accross a new type of online polls. Instead of asking questions the poll allows me to move the needle of a compass and then gives a graphical feedback on how other users voted. 
+&lt;img src="https://semitransparent.github.io/images/opinary2.png" alt="Screenshot" style="width: 40%;"/&gt;&lt;/p&gt;
+&lt;p&gt;These polls reminded me of old online polls that could easily be manipulated by refreshing the page and voting for the same thing over and over again. But the &lt;a href="http://opinary.com/"&gt;Opinary&lt;/a&gt; poll seemed more clever. Refreshing the page led to nothing but the result I already voted for. Even after clearing the cookies my result stayed the same. In Incognito mode I was able to vote multiple times but that did not seem like a very scalable approach. The little counter told me 15.000 users had already voted and every time I refreshed the page some very annoying autoplay video started. Also it took ages to reload all the advertisements.  &lt;/p&gt;
+&lt;p&gt;To find a bit way I fired up mitmproxy once more and found the request done to create a new vote.
+&lt;img src="https://semitransparent.github.io/images/opinary3.png" alt="mitmproxy screenshot" style="width: 80%;"/&gt;&lt;/p&gt;
+&lt;p&gt;First odd thing I noticed: The request is not even https so Wireshark would have been enough. Its a simple post to some remote URL and does not contain much data. &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; are obiously I choose on the location in the compass, there is an id in there and a field alled &lt;code&gt;comment_auth&lt;/code&gt;. Simply resending the request did not work, the counter on the website did not increase. So I started playing with the &lt;code&gt;comment_auth&lt;/code&gt; token but the counter still stayed the same. Therefore some more sphisticated function had to be in place in that generates &lt;em&gt;valid&lt;/em&gt; tokens for the API. In order to find it I went into the glorious Chrome debugger and deobfuscated the Code. By setting a breakpoint I was able find the function call that generates the &lt;code&gt;comment_auth&lt;/code&gt; token. Lukily the .coffee source files of the complete plugin where delivered with the compiled .js so I did not have to deal with the obfuscated JavaScript for long. This is perfect for debugging but why would you do this in a production instance?&lt;br /&gt;
+Digging my way trough the function calls I ended up at a promising file. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// via: http://stackoverflow.com/a/2117523/2511985
+
+function getUniqueId(){
+  var str = &amp;#39;xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx&amp;#39;;
+  return str.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c == &amp;#39;x&amp;#39; ? r : (r&amp;amp;0x3|0x8);
+    return v.toString(16);
+  });
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Props for naming the stackoverflow thread the code orginates from, but its just some generic GUID generation. I triple checked the call stack but that was definitly the generator for the &lt;code&gt;comment_auth&lt;/code&gt; field in the request. So why did my manual manipulation of the GUID did not work? Maybe the number of users that voted was not updated in realtime?&lt;/p&gt;
+&lt;p&gt;To find that out I wrote a small script that constructs a vote request every second. Then I measured how many votes are created by real users during a 8 minute timeframe. After that I fired up my script and measured for 8 more minutes. The results met my expectations. I was able to take control of the needle and vote 8x more than all other voters in that timeframe combined.
+&lt;img src="https://semitransparent.github.io/images/opinary5.png" alt="graph of vote results" style="width: 80%;"/&gt;&lt;/p&gt;
+&lt;p&gt;Using this glitch opinary polls can easily be manipulated to show the desired result. Opinary is used by several German news sites like Spiegel Online, welt.de and the Huffington Post. I tried to get in touch with Opinary but there has not been any reaction to my mails.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 10/09/2016&lt;/strong&gt;&lt;br /&gt;
+Because there was no reaction from Opinary at all I went to write to the Newspapers that use their service. For demonstration purpose I needed some undeniable data. Did you know Donald Trump rapidly gained trust among Focus Online readers today? Also the new iPhone sucks massively.
+&lt;img src="https://semitransparent.github.io/images/opinary7.png" alt="graph of vote results" style="width: 80%;"/&gt;
+&lt;img src="https://semitransparent.github.io/images/opinary8.png" alt="graph of vote results" style="width: 80%;"/&gt;&lt;/p&gt;
+&lt;p&gt;Using these images I mailed the newspapers that use Opinary.  &lt;/p&gt;</summary></entry></feed>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--
+    (The MIT License)
+
+    Copyright (c) 2016 Kura
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the 'Software'), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+-->
+<html lang="en">
+<head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="alternate" href="https://semitransparent.github.io" hreflang="en" />
+<link rel="dns-prefetch" href="https://semitransparent.github.io">
+<link rel="dns-prefetch" href="//code.getmdl.io">
+    <link rel="shortcut icon" href="https://semitransparent.github.io/favicon.ico">
+    <title>bwin.com odds API</title>
+</head>
+<body>
+    <div class="eevee-layout mdl-layout mdl-js-layout mdl-color--grey-50">
+        <header class="eevee-header mdl-color--grey-50 mdl-color-text--grey-800"
+                itemscope itemtype="http://schema.org/WPHeader">
+            <div class="mdl-layout__header-row" id="top">
+                <div aria-expanded="false" role="button" tabindex="0"
+                     class="mdl-layout__drawer-button mdl-color-text--accent eevee-mobile-button mdl-layout--small-screen-only">
+                    <i class="material-icons">&#xE5D2;</i>
+                </div>
+                <span class="eevee-logo mdl-color-text--accent mdl-layout-title">
+                    <h2>
+                        <a href="https://semitransparent.github.io" rel="bookmark"
+                           title="semi_transparent">
+                            semi_transparent
+                        </a>
+                    </h2>
+                </span>
+                <div class="mdl-layout-spacer" role="presentation"></div>
+                <nav class="eevee-nav mdl-navigation mdl-layout--large-screen-only"
+                     itemscope itemtype="http://schema.org/SiteNavigationElement"
+                     aria-label="Header navigation">
+    <a class="mdl-color-text--accent mdl-navigation__link"
+       href="https://twitter.com/semitransp" itemprop="url" rel="bookmark">
+        <i class='fa fa-twitter fa-2x'></i>
+    </a>
+    <a class="mdl-color-text--accent mdl-navigation__link"
+       href="mailto:semitransp@gmail.com" itemprop="url" rel="bookmark">
+        <i class='fa fa-envelope fa-2x'></i>
+    </a>
+                </nav>
+            </div>
+        </header>
+        <div class="eevee-mobile-header mdl-layout__drawer mdl-color--white"
+             aria-hidden="true">
+            <span class="mdl-layout-title">
+                <h2 class="eevee-mobile-logo mdl-color-text--accent">
+                    semi_transparent
+                </h2>
+            </span>
+            <div class="mdl-navigation mdl-color--white">
+                <nav class="eevee-nav mdl-navigation" itemscope
+                     itemtype="http://schema.org/SiteNavigationElement"
+                     aria-label="Header navigation">
+                    <a class="mdl-color-text--accent mdl-navigation__link"
+                       href="https://semitransparent.github.io" itemprop="url" rel="bookmark">
+                        Home
+                    </a>
+    <a class="mdl-color-text--accent mdl-navigation__link"
+       href="https://twitter.com/semitransp" itemprop="url" rel="bookmark">
+        <i class='fa fa-twitter fa-2x'></i>
+    </a>
+    <a class="mdl-color-text--accent mdl-navigation__link"
+       href="mailto:semitransp@gmail.com" itemprop="url" rel="bookmark">
+        <i class='fa fa-envelope fa-2x'></i>
+    </a>
+                </nav>
+            </div>
+        </div>
+        <div id="eevee-ribbon-particle" class="eevee-ribbon mdl-color--primary-dark" role="presentation">
+        </div>
+        <main class="eevee-main mdl-layout__content">
+            <div class="eevee-container mdl-grid">
+                <div role="presentation"
+                     class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+                </div>
+                <div class="eevee-content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"
+                     aria-label="Main content">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+<meta itemprop="accessibilityControl" content="fullKeyboardControl">
+<meta itemprop="accessibilityControl" content="fullMouseControl">
+<meta itemprop="accessibilityControl" content="bookmarks">
+<meta itemprop="accessibilityControl" content="captions">
+<meta itemprop="accessibilityControl" content="alternativeText">
+<meta itemprop="accessibilityControl" content="index">
+<meta itemprop="accessibilityControl" content="readingOrder">
+<meta itemprop="accessibilityControl" content="structuralNavigation">
+<meta itemprop="accessibilityControl" content="tableOfContents">
+<meta itemprop="accessibilityHazard" content="noFlashingHazard">
+<meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
+<meta itemprop="accessibilityHazard" content="noSoundHazard">
+<meta itemprop="accessibilityAPI" content="ARIA">
+    <div itemprop="author" itemscope
+         itemtype="https://schema.org/Person" role="presentation">
+        <a href="https://semitransparent.github.io/author/by-semi_transparent-hosted-by-github.html" class="hidden"
+           itemprop="url" role="presentation">
+            <span class="hidden" itemprop="name" role="presentation">
+                by semi_transparent. Hosted by github
+            </span>
+        </a>
+    </div>
+        <meta itemprop="keywords" content="API">
+    <div class="eevee-meta eevee-share">
+        <div class="mdl-layout-spacer"></div>
+        <div>
+            <ul class="social-share mdl-navigation">
+                <li class="social-share__link social-share__link--twitter">
+                    <a href="https://twitter.com/intent/tweet?text=bwin.com%20odds%20API&amp;url=https%3A//semitransparent.github.io/bwincom-odds-api.html&amp;related=semitransp"
+                       title="Share 'bwin.com odds API' on Twitter"
+                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235'); return false;">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-share__link social-share__link--facebook">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//semitransparent.github.io/bwincom-odds-api.html"
+                       title="Share 'bwin.com odds API' on Facebook"
+                       onclick="window.open(this.href, 'facebook-share', 'width=580,height=296'); return false;">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-share__link social-share__link--google-plus">
+                    <a href="https://plus.google.com/share?url=https%3A//semitransparent.github.io/bwincom-odds-api.html"
+                       title="Share 'bwin.com odds API' on Google+"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-share__link social-share__link--email">
+                    <a href="mailto:?subject=bwin.com%20odds%20API&amp;body=bwin.com%20odds%20API%20-%20https%3A//semitransparent.github.io/bwincom-odds-api.html%0A%0ASearching%20for%20and%20finding%20an%20API%20to%20poll%20betting%20odds%20from%20bwin.com%20by%20a%20man-in-the-middle%20on%20their%20official%20app%20I%20was%20searching%20for%20interesting%20statistical%20data%20the%20other%20day%20and%20stumbled%20across%20online%20betting.%20I%20never%20really%20got%20into%20gambling%20at%20all%20and%20was%20surprised%20how%20popular%20it%20is.%20The%20market%20is%20littered%20with%20more%20or%20less%20shady%20offers.%20Anyhow%20none%20of%20these%20seems%20to%20be%20pretty%20chatty%20about%20their%20data%20or%20even%20has%20an%20official%20API.%20Therefore%20I%20tried%20to%20analyze%20several%20websites%20just%20to%20find%20most%20of%20those%20betting%20providers%20try%20to%20obfuscate%20their%20backends%20API%20calls%20as%20good%20as%20they%20can.%20A%20little%20disappointed%20I%20picked%20bwin.com%20%28because%20they%20offer%20a%20hell%20of%20a%20lot%20of%20betting%20data%29%20and%20started%20to%20analyze%20their%20mobile%20application%20for%20more%20insights%20in%20how%20their%20API%20works.%20Using%20mitmproxy%20I%20was%20able%20to%20man-in-the-middle%20the%20calls%20to%20the%20backend%20...' via email">
+                        <i class="material-icons" aria-hidden="true">&#xE0E1;</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div class="eevee-article">
+            <div class="eevee-meta mdl-color-text--grey-500">
+                <time datetime="2016-08-30T16:51:00+02:00"
+                      itemprop="datePublished">
+                    Tue 30 August 2016
+                </time>
+            </div>
+            <h1 itemprop="name">
+                <a href="https://semitransparent.github.io/bwincom-odds-api.html" rel="bookmark"
+                   title="Permalink to 'bwin.com odds API'"
+                   itemprop="url">
+                    bwin.com odds API
+                </a>
+            </h1>
+            <section itemprop="articleBody" class="article-content">
+                <p><em>Searching for and finding an API to poll betting odds from bwin.com by a man-in-the-middle on their official app</em></p>
+<p>I was searching for interesting statistical data the other day and stumbled across online betting. I never really got into gambling at all and was surprised how popular it is. The market is littered with more or less shady offers. Anyhow none of these seems to be pretty chatty about their data or even has an official API. Therefore I tried to analyze several websites just to find most of those betting providers try to obfuscate their backends API calls as good as they can.
+A little disappointed I picked bwin.com (because they offer a hell of a lot of betting data) and started to analyze their mobile application for more insights in how their API works. Using <a href="https://mitmproxy.org/">mitmproxy</a> I was able to man-in-the-middle the calls to the backend API. There is a good tutorial on how to intercept phone connection with mitmproxy <a href="http://www.digitalinternals.com/mobile/android-sniff-http-https-traffic-without-root/490/">here</a>. It turns out this API is much better to use than the one used by the website.</p>
+<p>First odd thing I noticed is that the official bwin app is not in Playstore but needs to be downloaded from their site. This leads to a pretty hilarious website and makes bwin assure you about 5 times this app really is legit and you should absolutely install it despite all warnings.</p>
+<p><img src="https://semitransparent.github.io/images/bwin4.jpg" alt="Screenshot" style="width: 95%;"/></p>
+<p>So I downloaded the app and set up the capture.  </p>
+<p>Starting the app caused lot of pollution in mimproxy. From a fresh start I counted 19 connections made to different endpoints. No less than 4 analytics networks are queried by the bwin app: appsflyer.com, eumcollector, mixpanel and google-analytics. Even before I had any interaction with the app my carrier name, device, network type and other things were transferred to third party servers.</p>
+<p>Another call caught my attention.</p>
+<div class="highlight"><pre><span></span>GET https://media.itsfogo.com/media/mobile/COM/sports/android/SB_POS3006_config.txt
+    ← 200 text/plain 3.6kB 138ms
+</pre></div>
+
+
+<p>itsfogo.com seems to act as a shared repository for all services offered by the company behind bwin, bwin.party digital entertainment plc in Gibraltar. The certificate has alt names registered for a list of 38! other domains. Most of these domains are clearly related to online gambling and betting like foxybingo.com or partypoker.com. Two domains stick out: intertrader.com claims to be a more serious brooking website and theborgata.com is an actual Casio in Atlantic city (which offers online gambling as well). There is an Outlook mail server hosted at mail.itsfogo.com.</p>
+<p>Like the name already suggests <code>SB\_POS3006_config.txt</code> is a configuration file for the Android client. The JSON content is very readable. <code>"application_disabled": false</code> for example looks like a kill switch for the app and <code>"application_disabled_comment": "show maintenance message"</code> explains what happens when its triggered. (Who puts comments in the content of a configuration json file?)<br />
+Things could have ended fast with <code>"betting_api_url": "",</code> but its empty. So we get to know that poker is currently not 'cross-sold' to AT, DE and UA and the latest supported app version is 69.<br />
+The next thing of interest is <code>"legacy_device_url": "https://lite.bwin.com"</code>. It links to a reduced version of bwin which uses a bit less cluttered API and is also free from a blinking Flash advertisement. If I'd be into online gambling I'd definitely prefer that page over bwin.com. Also we see a long list of which advertisement is currently active in which country like the <code>Casino slider short appearance promotion</code>. Last interesting thing is the update .apk URL <code>http://media.itsfogo.com/media/upload/mobile/android/apk/bwinlive.apk</code>.</p>
+<p>All the analytics and configuration left aside two domains are left.</p>
+<div class="highlight"><pre><span></span>GET https://api.bwin.com/V3/GeoLocation.svc/IP/
+   ← 200 application/json 213B 165ms
+</pre></div>
+
+
+<p>Bwin seems to run their own geolocation API. Because its IP based accuracy is just on a city level in my case. All api.bwin.com calls look very generic and might very well be shared between the website and the mobile app. There is another call to get the current server time and one that contains localized tutorials and names for a lot of sports clubs and countries around the world.</p>
+<p>I had one promising domain left: mobileapi.bwinlabs.com.</p>
+<div class="highlight"><pre><span></span>GET https://en.mobileapi.bwinlabs.com/api/android/v2/events/ms2common?leagueid=43&amp;regionid=17&amp;overview_or_events_switch=...
+    ← 200 application/json 18.13kB 247ms
+</pre></div>
+
+
+<p>Good thing is, the response contains betting odds for several soccer related events. Bad thing is all parameters are URL encoded and the response mixes up several tournaments and types of betting. In order to understand the meanings of the request fields I clicked on the 'soccer' category and narrowed my search to only Premier League games. Decoding the URL leads to something better readable.</p>
+<div class="highlight"><pre><span></span>https://en.mobileapi.bwinlabs.com/api/android/v2/events/ms2common?leagueid=46&amp;regionid=14&amp;overview_or_events_switch={events:10,locations:1,leagues:1,keep_overview:true}&amp;sportid=4&amp;markettemplateid=14&amp;overview=&amp;events=&amp;page_size=500&amp;tournamentlist=true&amp;country=uk&amp;ipcountry=uk&amp;partnerid=com.bwinlabs.betdroid_16.7.17&amp;label=com&amp;mediaprovider=unas,perform
+</pre></div>
+
+
+<p><code>/api/android/v2/events/ms2common</code> is the path for all requests going to the API. Maybe there is another API used for iPhones. I have no clue what ms2common is. </p>
+<p><code>sportid=4</code> clearly marks the sport to search bets for. Basketball is 7, Tennis 5, Ice Hockey 12, Handball 16, Volleyball 18.<br />
+<code>regionid=14</code> marks I was searching for soccer in England. RegionIDs are consistent over sports so if Germany is region 17 in soccer it will also be in handball. Of course not every country hosts bets of every sport. <code>leagueid=46</code> marks Premier League.<br />
+These three parameters can easily be obtained from <a href="https://lite.bwin.com/en/Sports/Main">bwin lite</a>. Clicking trough the table the URL encodes <code>https://lite.bwin.com/en/sports/main/regionID/sportID/leagueID</code>.<br />
+The other parameters control how many and what information are packed into the JSON. So I started stripping the request. <code>markettemplateid=17</code> seems to control if only popular offers should be shown or all of them. Removing lead to a 7MB JSON file containing a pretty good list of games and betting odds. With the 'page_size' attribute this huge JSON can be shrinked by only showing the latest n offerings. 
+All other request parameters except the <code>events</code> keyword can be removed. The original request headers are not needed as well.</p>
+<p>Using that knowledge coding a Python wrapper for basic odd requests is very simple.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">def</span> <span class="nf">getOdds</span><span class="p">(</span><span class="n">regionID</span><span class="p">,</span> <span class="n">sportID</span><span class="p">,</span> <span class="n">leagueID</span><span class="p">,</span> <span class="n">result_size</span><span class="o">=</span><span class="mi">500</span><span class="p">):</span>
+    <span class="n">parameters</span> <span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;regionid&quot;</span><span class="p">:</span> <span class="n">regionID</span><span class="p">,</span>
+        <span class="s2">&quot;sportid&quot;</span><span class="p">:</span> <span class="n">sportID</span><span class="p">,</span>
+        <span class="s2">&quot;leagueid&quot;</span><span class="p">:</span> <span class="n">leagueID</span><span class="p">,</span>
+        <span class="s2">&quot;page_size&quot;</span><span class="p">:</span> <span class="n">result_size</span><span class="p">,</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;partnerid&quot;</span><span class="p">:</span> <span class="s2">&quot;dummy&quot;</span> <span class="c1">#Can be anything</span>
+    <span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://en.mobileapi.bwinlabs.com/api/android/v2/events/ms2common&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">getOdds</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="n">result_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#Query for 10 games</span>
+
+<span class="c1">#Working with the response</span>
+<span class="k">for</span> <span class="n">game</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">][</span><span class="s2">&quot;items&quot;</span><span class="p">][</span><span class="s2">&quot;events&quot;</span><span class="p">]:</span> <span class="c1">#Iterate over all the games</span>
+    <span class="n">odds</span> <span class="o">=</span> <span class="n">game</span><span class="p">[</span><span class="s2">&quot;non_live&quot;</span><span class="p">][</span><span class="s2">&quot;games&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;results&quot;</span><span class="p">]</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">game</span><span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+    <span class="n">odds1</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">odds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;odds&quot;</span><span class="p">])</span>
+    <span class="n">oddsX</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">odds</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;odds&quot;</span><span class="p">])</span>
+    <span class="n">odds2</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">odds</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s2">&quot;odds&quot;</span><span class="p">])</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">35</span><span class="p">),</span> <span class="n">odds1</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">oddsX</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">odds2</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#Format the output nicely</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>   Manchester Utd - Manchester City  2.35   3.3   2.9
+        Bournemouth - West Bromwich   2.0   3.3  3.75
+        Arsenal FC - Southampton FC  1.53  4.25   5.5
+                Burnley - Hull City   2.2   3.2   3.3
+  Middlesbrough FC - Crystal Palace   2.2   3.2   3.3
+     Stoke City - Tottenham Hotspur   4.5   3.6  1.75
+          West Ham United - Watford  1.85   3.6   4.0
+      Liverpool FC - Leicester City  1.62  3.75   5.5
+          Swansea City - Chelsea FC   5.5   3.8  1.57
+               Sunderland - Everton   3.4   3.3   2.1
+</pre></div>
+
+
+<p>In general the returned JSON is pretty readable but contains a lot of redundant information.<br />
+Further research could include the mapping from names to IDs and using the API to place an actual bet.</p>
+            </section>
+        </div>
+    </article>
+                </div>
+            </div>
+        </main>
+        <footer class="mdl-mega-footer" itemscope
+                itemtype="http://schema.org/SiteNavigationElement">
+            <div class="mdl-mega-footer--top-section">
+                <div class="mdl-mega-footer--drop-down-section">
+                    <ul class="mdl-mega-footer--link-list">
+                        <li>
+                            <a href="#top" itemprop="url"
+                               title="Back to the top of the page">
+                                Back to the top of the page
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mdl-mega-footer--bottom-section">
+                <div class="mdl-logo">
+                    <a href="https://semitransparent.github.io" rel="bookmark" itemprop="url"
+                       title="semi_transparent">
+                        semi_transparent
+                    </a>
+                </div>
+                    <ul class="eevee-footer mdl-mega-footer--link-list">
+                            <li><a href="https://kura.io/eevee/" title="Eevee">Eevee</a> theme by <a href="https://kura.io/" title="kura.io">kura.io</a></li>
+                    </ul>
+            </div>
+        </footer>
+    </div>
+    <link rel="stylesheet"
+          href="//code.getmdl.io/1.1.3/material.amber-red.min.css">
+        <link rel="stylesheet" type="text/css"
+              href="https://semitransparent.github.io/theme/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css"
+              href="https://semitransparent.github.io/theme/css/material-icons.css">
+        <link rel="stylesheet" type="text/css"
+              href="https://semitransparent.github.io/theme/css/pygments.css">
+        <link rel="stylesheet" type="text/css"
+              href="https://semitransparent.github.io/theme/css/eevee.css">
+        <link rel="stylesheet" type="text/css"
+              href="https://semitransparent.github.io/theme/css/custom.css">
+        <script async src="https://semitransparent.github.io/theme/js/material.js"></script>
+        <script src="https://semitransparent.github.io/theme/js/jquery.particleground.js"></script>
+        <script>
+        	particleground(document.getElementById("eevee-ribbon-particle"));
+        </script>
+        
+</body>
+</html>
